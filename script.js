@@ -1,4 +1,5 @@
 const myLibrary = [];
+const main = document.querySelector(".main");
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -24,6 +25,12 @@ addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
 function showBooksInLibrary() {
   for (bookNumber in myLibrary) {
     console.log(myLibrary[bookNumber].info());
+    let book = document.createElement("div");
+    let bookTitle = document.createElement("h1");
+    bookTitle.textContent = myLibrary[bookNumber].title;
+    console.log(myLibrary[bookNumber].title);
+    book.appendChild(bookTitle);
+    main.appendChild(book);
   }
 }
 

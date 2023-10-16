@@ -33,5 +33,3 @@ function showBooksInLibrary() {
     main.appendChild(book);
   }
 }
-
-showBooksInLibrary();

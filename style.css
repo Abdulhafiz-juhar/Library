@@ -1,7 +1,22 @@
 * {
-  border: solid;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
 }
 
 .main {
-  height: 20rem;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.main .book {
+  border: solid;
+  height: 10rem;
+  border-radius: 5px;
 }

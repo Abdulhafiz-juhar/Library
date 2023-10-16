@@ -8,7 +8,6 @@ body {
 }
 
 .main {
-  height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -17,6 +16,21 @@ body {
 
 .main .book {
   border: solid;
-  height: 10rem;
+  height: 100%;
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.book_image {
+  height: 100%;
+  width: 100%;
+}
+.book_image img {
+  height: 100%;
+  width: max(75px, 100%);
+}
+
+.book .book_details {
+  min-width: 100px;
+  display: grid;
 }

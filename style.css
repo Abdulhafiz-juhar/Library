@@ -45,8 +45,12 @@ body {
 .book .book_details {
   min-width: 100px;
   display: grid;
+  align-items: center;
 }
-
+.book_details .book_title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
 .book_details .book_page_status {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

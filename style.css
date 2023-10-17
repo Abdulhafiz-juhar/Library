@@ -1,22 +1,32 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   height: 100vh;
+  display: grid;
 }
-
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.header {
+  display: grid;
+  place-items: center;
+}
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(253px, 1fr));
   gap: 1rem;
   padding: 1rem;
+  align-content: start;
 }
 
 .main .book {
   border: solid;
-  height: 100%;
+  height: fit-content;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -35,4 +45,18 @@ body {
 .book .book_details {
   min-width: 100px;
   display: grid;
+}
+
+.book_details .book_page_status {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+}
+
+.footer button {
+  margin: 0.4rem;
 }

@@ -73,3 +73,13 @@ body {
   background-color: #1992d4;
   border: none;
 }
+
+.add_book_form {
+  display: grid;
+}
+
+.form_content .keyboardInputs {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.3rem;
+}

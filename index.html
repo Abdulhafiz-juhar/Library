@@ -14,6 +14,50 @@
       </div>
       <div class="main"></div>
       <div class="footer">
+        <!-- <dialog class="add_book_dialog"> -->
+        <form class="add_book_form">
+          <div class="form-heading">
+            <h1>Enter New book</h1>
+          </div>
+          <div class="form_content">
+            <div class="keyboardInputs">
+              <label for="bookTitle">Title</label
+              ><input type="text" name="bookTitle" id="bookTitle" required />
+
+              <label for="bookAuthor">Author</label
+              ><input
+                type="text"
+                name="bookAuthor"
+                id="bookAuthor"
+                placeholder=" "
+                required
+              />
+              <label for="bookPages">Pages</label
+              ><input
+                type="number"
+                name="bookPages"
+                id="bookPages"
+                placeholder=" "
+                required
+              />
+            </div>
+
+            <fieldset class="read_status_wrapper">
+              <legend>Read Status</legend>
+              <input id="read" name="readStatus" type="radio" value="Read" />
+              <label for="read" class="read_label">Read</label>
+              <input
+                id="notRead"
+                name="readStatus"
+                type="radio"
+                value="notRead"
+                checked
+              />
+              <label for="notRead" class="notRead_label">Not Read</label>
+            </fieldset>
+          </div>
+        </form>
+        <!-- </dialog> -->
         <button>New Book</button>
       </div>
     </div>

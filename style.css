@@ -22,6 +22,7 @@ body {
   gap: 1rem;
   padding: 1rem;
   align-content: start;
+  background-color: #e2e8f0;
 }
 
 .main .book {
@@ -31,6 +32,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   min-width: 200px;
+  background-color: #fff;
 }
 .book_image {
   height: 100%;
@@ -63,4 +65,11 @@ body {
 
 .footer button {
   margin: 0.4rem;
+
+  width: 5.8rem;
+  height: 2.3rem;
+  border-radius: 2rem;
+  color: white;
+  background-color: #1992d4;
+  border: none;
 }

@@ -12,6 +12,10 @@ function Book(title, author, pages, read) {
       this.read ? "already read" : "not read yet"
     }`;
   };
+
+  this.readToggle = function () {
+    this.read = !this.read;
+  };
 }
 
 function addBookToLibrary(title, author, pages, read) {
@@ -42,6 +46,8 @@ function showAddedBook() {
     book_status.classList.add("book_status");
     let book_remove = document.createElement("button");
     book_remove.classList.add("book_remove");
+    let book_read_toggle = document.createElement("button");
+    book_read_toggle.classList.add("book_read_toggle");
 
     book_title.textContent = myLibrary[bookNumber].title;
     book_author.textContent = myLibrary[bookNumber].author;
@@ -56,6 +62,13 @@ function showAddedBook() {
       myLibrary.splice(currentElementIndex, 1);
       showAddedBook();
     });
+    book_read_toggle.textContent = "read or not";
+    book_read_toggle.setAttribute("data", bookNumber);
+    book_read_toggle.addEventListener("click", (e) => {
+      let currentElementIndex = e.target.getAttribute("data");
+      myLibrary[currentElementIndex].readToggle();
+      showAddedBook();
+    });
 
     book_details.appendChild(book_title);
     book_details.appendChild(book_author);
@@ -63,6 +76,7 @@ function showAddedBook() {
     book_page_status.appendChild(book_status);
     book_details.appendChild(book_page_status);
     book_details.appendChild(book_remove);
+    book_details.appendChild(book_read_toggle);
     book_image.appendChild(book_image_file);
 
     book.appendChild(book_image);

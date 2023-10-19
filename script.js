@@ -68,3 +68,14 @@ function showBooksInLibrary() {
 }
 
 showBooksInLibrary();
+
+const add_book_dialog = document.querySelector(".add_book_dialog");
+const newBook = document.querySelector(".newBook");
+
+const bookTitle = document.querySelector("#bookTitle");
+const bookAuthor = document.querySelector("#bookAuthor");
+const bookPages = document.querySelector("#bookPages");
+
+newBook.addEventListener("click", () => {
+  add_book_dialog.showModal();
+});

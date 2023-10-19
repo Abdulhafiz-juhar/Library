@@ -112,6 +112,7 @@ addBook.addEventListener("click", (e) => {
       myLibrary[myLibrary.length - 1].read
     );
   }
+  add_book_dialog.close();
 });
 
 cancelBook.addEventListener("click", () => {

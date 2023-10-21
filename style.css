@@ -83,3 +83,13 @@ body {
   grid-template-columns: auto auto;
   gap: 0.3rem;
 }
+
+dialog.add_book_dialog {
+  padding: 1rem;
+  margin: auto;
+  border-radius: 5px;
+}
+
+dialog.add_book_dialog::backdrop {
+  backdrop-filter: blur(1px);
+}

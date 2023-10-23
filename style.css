@@ -7,6 +7,7 @@
 body {
   height: 100vh;
   display: grid;
+  background-color: #e2e8f0;
 }
 .container {
   display: grid;
@@ -22,7 +23,6 @@ body {
   gap: 1rem;
   padding: 1rem;
   align-content: start;
-  background-color: #e2e8f0;
 }
 
 .main .book {
@@ -88,8 +88,33 @@ dialog.add_book_dialog {
   padding: 1rem;
   margin: auto;
   border-radius: 5px;
+  box-shadow: inset -1px 0px 16px 1px #aca5a5;
 }
 
 dialog.add_book_dialog::backdrop {
   backdrop-filter: blur(1px);
+}
+.read_status_wrapper {
+  border: none;
+  margin-top: 5px;
+}
+.read_status_wrapper legend {
+  float: left;
+  margin-right: 13px;
+}
+
+.form_buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  justify-content: center;
+}
+
+.form_content {
+  display: grid;
+}
+
+.form_content button {
+  width: 4rem;
+  height: 1.5rem;
 }

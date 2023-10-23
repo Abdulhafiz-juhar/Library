@@ -42,8 +42,8 @@ function showAddedBook() {
     book_page_status.classList.add("book_page_status");
     let book_page = document.createElement("div");
     book_page.classList.add("book_page");
-    let book_status = document.createElement("div");
-    book_status.classList.add("book_status");
+    // let book_status = document.createElement("div");
+    // book_status.classList.add("book_status");
     let book_remove = document.createElement("button");
     book_remove.classList.add("book_remove");
     let book_read_toggle = document.createElement("button");
@@ -52,9 +52,9 @@ function showAddedBook() {
     book_title.textContent = myLibrary[bookNumber].title;
     book_author.textContent = myLibrary[bookNumber].author;
     book_page.textContent = `${myLibrary[bookNumber].pages} pages`;
-    book_status.textContent = myLibrary[bookNumber].read
-      ? "already read"
-      : "not read yet";
+    // book_status.textContent = myLibrary[bookNumber].read
+    //   ? "already read"
+    //   : "not read yet";
     book_remove.textContent = "Remove";
     book_remove.setAttribute("data", bookNumber);
     book_remove.addEventListener("click", (e) => {
@@ -62,7 +62,9 @@ function showAddedBook() {
       myLibrary.splice(currentElementIndex, 1);
       showAddedBook();
     });
-    book_read_toggle.textContent = "read or not";
+    book_read_toggle.textContent = myLibrary[bookNumber].read
+      ? "Already Read"
+      : "Not Read";
     book_read_toggle.setAttribute("data", bookNumber);
     book_read_toggle.addEventListener("click", (e) => {
       let currentElementIndex = e.target.getAttribute("data");
@@ -73,7 +75,7 @@ function showAddedBook() {
     book_details.appendChild(book_title);
     book_details.appendChild(book_author);
     book_page_status.appendChild(book_page);
-    book_page_status.appendChild(book_status);
+    // book_page_status.appendChild(book_status);
     book_details.appendChild(book_page_status);
     book_details.appendChild(book_remove);
     book_details.appendChild(book_read_toggle);
